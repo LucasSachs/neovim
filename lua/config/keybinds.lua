@@ -9,5 +9,5 @@ vim.keymap.set('v', '<leader>Y', '"+Y')
 vim.keymap.set('v', '<leader>p', '"+p')
 vim.keymap.set('v', '<leader>P', '"+P')
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeOpen<CR>')
+vim.keymap.set('n', '<leader>e', ':NvimTreeOpen position=right <CR>')
 
