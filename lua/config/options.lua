@@ -15,3 +15,7 @@ vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 
+-- Neovide
+vim.g.neovide_opacity = 0.85
+vim.g.neovide_background_color = "#00000000"
+
