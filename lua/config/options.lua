@@ -1,7 +1,15 @@
+vim.o.guifont = "lilex:h17"
+
+-- Globals
+vim.g.neovide_cursor_animation_length = 0
+vim.g.mapleader = " "
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- Vim options
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = true 
 vim.opt.shiftwidth = 2
-vim.o.guifont = "lilex:h17"
-vim.g.neovide_cursor_animation_length = 0
+vim.opt.termguicolors = true
 
