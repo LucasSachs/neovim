@@ -9,13 +9,12 @@ vim.g.nvim_tree_respect_buf_cwd = 1
 
 -- Vim options
 vim.opt.number = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.relativenumber = true 
 vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
-vim.opt.clipboard = "unnamedplus"
 
 -- Neovide
-vim.g.neovide_opacity = 0.85
+vim.g.neovide_opacity = 0.9
 vim.g.neovide_background_color = "#00000000"
 
