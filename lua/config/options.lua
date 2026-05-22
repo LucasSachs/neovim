@@ -13,6 +13,7 @@ vim.opt.cursorline = false
 vim.opt.relativenumber = true 
 vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
+vim.opt.wrap = false
 
 -- Neovide
 vim.g.neovide_opacity = 0.9
