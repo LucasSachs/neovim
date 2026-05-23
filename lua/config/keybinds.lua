@@ -1,14 +1,15 @@
-vim.keymap.set({'n', 'v', 'x'}, '<Up>', '<Nop>')
-vim.keymap.set({'n', 'v', 'x'}, '<Down>', '<Nop>')
-vim.keymap.set({'n', 'v', 'x'}, '<Left>', '<Nop>')
-vim.keymap.set({'n', 'v', 'x'}, '<Right>', '<Nop>')
+vim.keymap.set('', '<Up>', '<Nop>')
+vim.keymap.set('', '<Down>', '<Nop>')
+vim.keymap.set('', '<Left>', '<Nop>')
+vim.keymap.set('', '<Right>', '<Nop>')
 
 vim.keymap.set('n', '<leader>e', ':NvimTreeOpen<CR>')
+vim.keymap.set('n', '<leader>d', ':Trouble diagnostics toggle focus=true<CR>')
 
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set({"n", "v"}, "<leader>Y", [["+Y]])
-vim.keymap.set({"n"}, "<leader>p", [["+p]])
-vim.keymap.set({"n"}, "<leader>P", [["+P]])
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
+vim.keymap.set({ 'n', 'v' }, '<leader>Y', [["+Y]])
+vim.keymap.set({ 'n' }, '<leader>p', [["+p]])
+vim.keymap.set({ 'n' }, '<leader>P', [["+P]])
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

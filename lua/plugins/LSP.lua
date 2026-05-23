@@ -1,0 +1,23 @@
+return {
+  {
+    'mason-org/mason.nvim',
+    opts = {}
+  },
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      vim.lsp.config('lua_ls', {
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { 'vim' },
+            },
+          },
+        },
+      })
+
+      vim.lsp.enable('lua_ls')
+      vim.lsp.enable('ts_ls')
+    end,
+  },
+}
