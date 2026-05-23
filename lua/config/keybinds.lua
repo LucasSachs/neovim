@@ -26,3 +26,5 @@ vim.keymap.set('n', '<leader>h', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set('n', '<leader>b', '<C-o>')
 vim.keymap.set('n', '<leader>n', '<C-i>')
 
+vim.keymap.set('n', 'x', '"_x')
+

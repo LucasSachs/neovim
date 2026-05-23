@@ -12,6 +12,7 @@ vim.opt.relativenumber = true
 vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
 vim.opt.wrap = false
+vim.opt.autoindent = true
 
 -- Neovide
 vim.g.neovide_opacity = 0.95
