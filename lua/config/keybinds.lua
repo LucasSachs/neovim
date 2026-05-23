@@ -22,5 +22,7 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><Esc>')
 vim.keymap.set('n', '<leader>h', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 vim.keymap.set('n', '<leader>b', '<C-o>')
+vim.keymap.set('n', '<leader>n', '<C-i>')
 

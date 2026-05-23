@@ -8,7 +8,7 @@ return {
       build = 'make',
     },
   },
-  
+
   config = function ()
     local builtin = require('telescope.builtin')
 
