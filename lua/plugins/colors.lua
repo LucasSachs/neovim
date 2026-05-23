@@ -12,5 +12,11 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = { theme = 'gruvbox-material' }
-  }
+  },
+  {
+    'folke/trouble.nvim',
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = {}, -- see https://github.com/folke/trouble.nvim
+  },
 }

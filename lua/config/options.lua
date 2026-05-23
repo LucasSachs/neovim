@@ -19,6 +19,3 @@ vim.opt.wrap = false
 vim.g.neovide_opacity = 0.95
 vim.g.neovide_normal_opacity = 0.95
 
--- LSP
-vim.diagnostic.config({ virtual_text = true })
-
