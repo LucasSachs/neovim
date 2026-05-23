@@ -15,8 +15,11 @@ return {
   },
   {
     'folke/trouble.nvim',
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    cmd = "Trouble",
-    keys = {}, -- see https://github.com/folke/trouble.nvim
+    cmd = 'Trouble',
+
+    -- see https://github.com/folke/trouble.nvim
+    keys = {
+      { '<leader>d', '<cmd>Trouble diagnostics toggle focus=true<CR>' }
+    }
   },
 }
