@@ -16,6 +16,7 @@ return {
   {
     'folke/trouble.nvim',
     cmd = 'Trouble',
+    opts = {},
 
     -- see https://github.com/folke/trouble.nvim
     keys = {

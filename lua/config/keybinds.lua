@@ -15,6 +15,8 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', '<C-o>', 'o<Esc>')
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')

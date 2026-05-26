@@ -1,4 +1,4 @@
-vim.o.guifont = "Lilex Nerd Font Mono:h17"
+vim.o.guifont = "Lilex Nerd Font Mono:h15"
 
 -- Globals
 vim.g.neovide_cursor_animation_length = 0

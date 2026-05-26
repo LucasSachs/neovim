@@ -9,11 +9,6 @@ return {
 
     ---@module 'blink.cmp'
     opts = {
-      -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-      -- 'super-tab' for mappings similar to vscode (tab to accept)
-      -- 'enter' for enter to accept
-      -- 'none' for no mappings
-      --
       -- All presets have the following mappings:
       -- C-space: Open menu or open docs if already open
       -- C-n/C-p or Up/Down: Select next/previous item
@@ -22,30 +17,20 @@ return {
       --
       -- See :h blink-cmp-config-keymap for defining your own keymap
       keymap = { preset = 'default' },
-
-      appearance = {
-	-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-	-- Adjusts spacing to ensure icons are aligned
-	nerd_font_variant = 'mono'
-      },
+      appearance = { nerd_font_variant = 'mono' },
 
       -- (Default) Only show the documentation popup when manually triggered
-      completion = { documentation = { auto_show = false } },
+      -- completion = { documentation = { auto_show = false } },
 
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
-      sources = {
-	default = { 'lsp', 'path', 'snippets', 'buffer' },
-      },
-
-      -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
-      -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
-      -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
-      --
-      -- See the fuzzy documentation for more information
+      sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
       fuzzy = { implementation = "prefer_rust_with_warning" }
     },
     opts_extend = { "sources.default" }
+  },
+  {
+    'b0o/schemastore.nvim',
   },
   {
     'neovim/nvim-lspconfig',
@@ -65,6 +50,17 @@ return {
 
       vim.lsp.config('ts_ls', { capabilities = blink.get_lsp_capabilities() })
 
+      vim.lsp.config('jsonls', {
+	capabilities = blink.get_lsp_capabilities(),
+	settings = {
+	  json = {
+	    schemas = require('schemastore').json.schemas(),
+	    validate = { enable = true },
+	  },
+	},
+      })
+
+      vim.lsp.enable('jsonls')
       vim.lsp.enable('lua_ls')
       vim.lsp.enable('ts_ls')
     end,

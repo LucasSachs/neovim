@@ -6,7 +6,7 @@ return {
 
       conform.setup({
 	formatters_by_ft = {
-	  typescript = { 'biome', 'eslint', stop_after_first = true },
+	  typescript = { 'biome', stop_after_first = true },
 	},
       })
 
