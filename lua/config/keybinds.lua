@@ -30,3 +30,8 @@ vim.keymap.set('n', '<leader>n', '<C-i>')
 
 vim.keymap.set('n', 'x', '"_x')
 
+vim.keymap.set('n', '<C-ScrollWheelUp>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1 end)
+vim.keymap.set('n', '<C-ScrollWheelDown>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1 end)
+
+vim.keymap.set('n', '<leader>ih', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, { desc = 'Toggle Inlay Hints' })
+

@@ -1,4 +1,4 @@
-vim.o.guifont = "Lilex Nerd Font Mono:h15"
+vim.o.guifont = "Inconsolata Nerd Font Mono:h14"
 
 -- Globals
 vim.g.neovide_cursor_animation_length = 0
@@ -20,4 +20,7 @@ vim.g.neovide_normal_opacity = 0.95
 
 -- Diagnostics
 vim.diagnostic.config({ virtual_text = true })
+
+-- LSP
+vim.lsp.inlay_hint.enable(true)
 
