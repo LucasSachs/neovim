@@ -1,7 +1,8 @@
 return {
   {
-    'mason-org/mason.nvim',
-    opts = {}
+    "mason-org/mason-lspconfig.nvim",
+    opts = { ensure_installed = { 'biome', 'jsonls', 'lua_ls', 'ts_ls' }},
+    dependencies = { { "mason-org/mason.nvim", opts = {} } },
   },
   {
     'saghen/blink.cmp',
@@ -12,33 +13,26 @@ return {
     opts = {
       keymap = { preset = 'default' },
       appearance = { nerd_font_variant = 'mono' },
+      sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
+      fuzzy = { implementation = "prefer_rust_with_warning" },
 
       completion = {
 	ghost_text = { enabled = true },
+	menu = { draw = { columns = { { 'kind_icon', 'kind', 'label', 'label_description', 'source_name', gap = 1 } } }},
 	documentation = {
 	  auto_show = true,
 	  auto_show_delay_ms = 500,
 	  treesitter_highlighting = true
 	},
-	menu = {
-	  draw = {
-	    columns = {
-	      { 'kind_icon', 'kind', 'label', 'label_description', 'source_name', gap = 1 },
-	    },
-	  },
-	},
       },
 
-      sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
-      fuzzy = { implementation = "prefer_rust_with_warning" }
     },
+
     opts_extend = { "sources.default" }
   },
   {
-    'b0o/schemastore.nvim',
-  },
-  {
     'neovim/nvim-lspconfig',
+    dependencies = { 'b0o/schemastore.nvim' },
     config = function()
       local blink = require('blink.cmp')
 
@@ -72,11 +66,6 @@ return {
       })
 
       vim.lsp.config('biome', { capabilites = blink.get_lsp_capabilities() })
-
-      vim.lsp.enable('biome')
-      vim.lsp.enable('jsonls')
-      vim.lsp.enable('lua_ls')
-      vim.lsp.enable('ts_ls')
     end
   },
 }
