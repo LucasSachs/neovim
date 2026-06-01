@@ -1,4 +1,4 @@
-vim.o.guifont = "Inconsolata Nerd Font Mono:h14"
+vim.o.guifont = "Inconsolata Nerd Font Mono:h18"
 
 -- Globals
 vim.g.neovide_cursor_animation_length = 0
