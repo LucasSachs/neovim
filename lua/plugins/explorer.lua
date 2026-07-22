@@ -16,6 +16,10 @@ return {
 	  update_root = true,
 	},
       })
+
+      local api = require('nvim-tree.api')
+
+      vim.keymap.set('n', '<leader>w', api.node.collapse)
     end
   }
 }
