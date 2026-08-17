@@ -54,7 +54,7 @@ return {
 	inlayHints = {
 	  includeInlayParameterNameHints = "all",
 	  includeInlayVariableTypeHints = true,
-	}
+	},
       })
 
       vim.lsp.config('jsonls', {
