@@ -9,11 +9,13 @@ return {
 
       require('nvim-tree').setup({
 	sync_root_with_cwd = true,
-	view = { side = 'right' },
 	respect_buf_cwd = true,
-	update_focused_file = {
-	  enable = true,
-	  update_root = true,
+	filters = { custom = { '^cache$', '^dist$' } },
+	update_focused_file = { enable = true },
+	renderer = { icons = { padding = '  ' } },
+	view = {
+	  side = 'right',
+	  width = 75,
 	},
       })
 

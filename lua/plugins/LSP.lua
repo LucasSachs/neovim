@@ -1,11 +1,13 @@
 return {
   {
     "mason-org/mason-lspconfig.nvim",
+
     opts = { ensure_installed = { 'biome', 'jsonls', 'lua_ls', 'ts_ls' }},
     dependencies = { { "mason-org/mason.nvim", opts = {} } },
   },
   {
     'saghen/blink.cmp',
+
     version = '1.*',
 
     ---@module 'blink.cmp'
@@ -25,13 +27,13 @@ return {
 	  treesitter_highlighting = true
 	},
       },
-
     },
 
     opts_extend = { "sources.default" }
   },
   {
     'neovim/nvim-lspconfig',
+
     dependencies = { 'b0o/schemastore.nvim' },
     config = function()
       local blink = require('blink.cmp')
