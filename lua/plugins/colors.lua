@@ -1,25 +1,55 @@
 return {
   {
-    'sainnhe/gruvbox-material',
+    'rebelot/kanagawa.nvim',
 
     lazy = false,
     priority = 1000,
+
+    opts = {
+      compile = false,             -- enable compiling the colorscheme
+      undercurl = true,            -- enable undercurls
+      commentStyle = { italic = true },
+      functionStyle = {},
+      keywordStyle = { italic = true},
+      statementStyle = { bold = true },
+      typeStyle = {},
+      transparent = false,         -- do not set background color
+      dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+      terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+      colors = {                   -- add/modify theme and palette colors
+	palette = {},
+	theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+      },
+      overrides = function(colors) -- add/modify highlights
+	return {}
+      end,
+      theme = "wave",              -- Load "wave" theme
+      background = {               -- map the value of 'background' option to a theme
+	dark = "wave",           -- try "dragon" !
+	light = "lotus"
+      },
+    }
   },
   {
     'nvim-lualine/lualine.nvim',
 
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = { theme = 'gruvbox-material' }
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+      'rebelot/kanagawa.nvim'
+    },
+
+    opts = { options = { theme = 'kanagawa' } }
   },
   {
     'folke/trouble.nvim',
 
     cmd = 'Trouble',
-    opts = {},
 
-    -- see https://github.com/folke/trouble.nvim
     keys = {
-      { '<leader>d', '<cmd>Trouble diagnostics toggle focus=true<CR>' }
+      {
+	'<leader>d',
+	'<cmd>Trouble diagnostics toggle focus=true<CR>'
+      }
     }
   },
 }
