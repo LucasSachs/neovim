@@ -2,6 +2,8 @@ return {
   {
     "ahmedkhalf/project.nvim",
 
-    opts = { manual_mode = true }
+    config = function()
+      require("project_nvim").setup({ manual_mode = true })
+    end
   },
 }
