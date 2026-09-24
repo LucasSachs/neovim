@@ -14,12 +14,10 @@ return {
 	  width = 60
 	},
 	respect_buf_cwd = true,
-	filters = { custom = { '^cache$', '^dist$' } },
+	filters = { custom = { '^dist$' } },
 	update_focused_file = { enable = true },
 	renderer = { icons = { padding = '  ' } },
-	filesystem_watchers = {
-	  ignore_dirs = { 'dist' }
-	}
+	filesystem_watchers = { ignore_dirs = { 'dist' } }
       })
 
       local api = require('nvim-tree.api')
