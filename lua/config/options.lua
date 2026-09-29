@@ -1,7 +1,7 @@
 -- Styling
 vim.o.guifont = "Inconsolata Nerd Font:h16"
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('gruvbox')
+vim.cmd.colorscheme('gruvbox-material')
 
 -- Globals
 vim.g.neovide_cursor_animation_length = 0
