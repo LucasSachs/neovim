@@ -16,7 +16,7 @@ return {
 	respect_buf_cwd = true,
 	filters = { custom = { '^dist$' } },
 	update_focused_file = { enable = true },
-	renderer = { icons = { padding = '  ' } },
+	renderer = { icons = { padding = ' ' } },
 	filesystem_watchers = { ignore_dirs = { 'dist' } }
       })
 

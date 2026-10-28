@@ -21,6 +21,9 @@ return {
       vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<CR>", { desc = "Fechar buffers à direita" })
       vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCloseLeft<CR>", { desc = "Fechar buffers à esquerda" })
       vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<CR>", { desc = "Fechar outros buffers" })
+
+      vim.keymap.set("n", "<PageUp>", "<Cmd>BufferLineMovePrev<CR>")
+      vim.keymap.set("n", "<PageDown>", "<Cmd>BufferLineMoveNext<CR>")
     end,
   },
 }
